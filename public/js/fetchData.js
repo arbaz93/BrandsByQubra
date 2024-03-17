@@ -5,7 +5,7 @@ const sortBtns = document.querySelectorAll(".sort-btns > button");
 let productsData = [];
 let pHeading = [];
 async function getData() {
-    const request = await fetch("/data/data.json"); //getting data
+    const request = await fetch("./data/data.json"); //getting data
     const data = await request.json(); // converting requested data into JSON
 
     return data;
