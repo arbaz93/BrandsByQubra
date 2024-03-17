@@ -1,0 +1,48 @@
+:root {
+    --border: 1px solid rgb(0, 0, 0, 1);
+    --border: 1px solid rgb(255, 255, 255, 1);
+}
+
+nav > *:nth-child(1) {
+    border: var(--border);
+}
+nav > *:nth-child(2),
+nav > *:nth-child(3) {
+    border-bottom: var(--border);
+    border-right: var(--border);
+    border-top: var(--border);
+}
+nav > *:nth-child(4) {
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+
+.product-image {
+    border: var(--border);
+}
+.product-description {
+    border-bottom: var(--border);
+    border-right: var(--border);
+}
+.product-name {
+    border-right: var(--border);
+    border-left: var(--border);
+    border-bottom: var(--border);
+}
+.arrows > .arrow-left,
+.arrows > .arrow-right  {
+    border-right: var(--border) !important;
+}
+
+.arrows {
+    border-bottom: var(--border);
+
+}
+@media (max-width: 750px) {
+    .arrows > .arrow {
+        border: var(--border) !important;
+    }
+    .product-name {
+        border-bottom: var(--border);
+    }
+}

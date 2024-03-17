@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands by Qubra</title>
+
+    <!-- font  families -->
+    <!-- font-family: "Montserrat", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- font-family: "Rubik", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/2c2c9f338f.js" crossorigin="anonymous" defer></script>
+
+    <!-- Css Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/borders.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet"> -->
+
+    <!-- js -->
+    <script src="js/slide.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/slideup.js" defer></script>
+    <script src="js/fetchData.js" defer></script>
+</head>
+<body >
+    <div class="wrap" data-main="true">
+        <!-- Navigation -->
+        <nav class="grid" data-nav-collapsed="false">
+            <div class="flex logo-section">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-q">ubra</i>
+                  </a>
+            </div>
+            <div class="flex page-links">
+                <a href="#" class="page-link shop-link uppercase">Shop</a>
+                <a href="#" class="page-link about-link uppercase">About</a>
+            </div>
+            <div class="flex contact-section">
+                <div class="flex social-links">
+                    <a href="#" class="link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="flex fourth-section">
+                    <a href="" class="get-in-touch uppercase">Get in touch</a>
+                    <div class="nav-btn">
+                        <i class="bars btn fa-solid fa-bars-staggered" onclick="navOpen()"></i>
+                        <i class="cross btn fa-solid fa-xmark" onclick="navClose()"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Nav -->
+            <div class="nav-mobile">
+             <div class="flex page-links">
+                <a href="#" class="page-link shop-link uppercase">Shop</a>
+                <a href="#" class="page-link about-link uppercase">About</a>
+            </div>
+                <a href="#" class="get-in-touch uppercase">Get in touch</a>
+                <div class="flex social-links">
+                    <a href="#" class="link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        <!-- ____________________________________________________ -->
+        <main class="container" data-translate-y="false">
+            <section class="page grid" data-index="0" data-status="active">
+                <div class="product-image"></div>
+                <div class="flex product-description">
+                    <p>A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?</p>
+                </div>
+                <div class="flex product-name uppercase">
+                    <h2>Gucci</h2>
+                    <a href="#">
+                        <p>Show Product</p>
+                    </a>
+                </div>
+                <div class="flex arrows">
+                    <button class="arrow arrow-left" onclick="slideLeft()">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                    <button class="arrow arrow-right" onclick="slideRight()">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="page grid" data-index="1" data-status="after">
+                <div class="product-image"></div>
+                <div class="flex product-description">
+                    <p>A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?</p>
+                </div>
+                <div class="flex product-name uppercase">
+                    <h2>Levi's</h2>
+                    <a href="#">
+                        <p>Show Product</p>
+                    </a>
+                </div>
+                <div class="flex arrows">
+                    <button class="arrow arrow-left" onclick="slideLeft()">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                    <button class="arrow arrow-right" onclick="slideRight()">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="page grid" data-index="2" data-status="after">
+                <div class="product-image"></div>
+                <div class="flex product-description">
+                    <p>A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?</p>
+                </div>
+                <div class="flex product-name uppercase">
+                    <h2>Prada</h2>
+                    <a href="#">
+                        <p>Show Product</p>
+                    </a>
+                </div>
+                <div class="flex arrows">
+                    <button class="arrow arrow-left" onclick="slideLeft()">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                    <button class="arrow arrow-right" onclick="slideRight()">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="page grid" data-index="3" data-status="after">
+                <div class="product-image"></div>
+                <div class="flex product-description">
+                    <p>A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?</p>
+                </div>
+                <div class="flex product-name uppercase">
+                    <h2>Dolce & Gabanna</h2>
+                    <a href="#">
+                        <p>Show Product</p>
+                    </a>
+                </div>
+                <div class="flex arrows">
+                    <button class="arrow arrow-left" onclick="slideLeft()">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                    <button class="arrow arrow-right" onclick="slideRight()">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+        <!-- Shop Section -->
+        <section id="shop" class="shop" data-up="false">
+            <h2>Shop</h2>
+            <div class="flex sort-btns">
+                <button class="all uppercase" data-option="All" onclick="appendData()">all</button>
+                <button class="Bags uppercase" data-option="Bag" onclick="sortData('Bag')">Bags</button>
+                <button class="Jewelery uppercase" data-option="Jewelery" onclick="sortData('Jewelery')">Jewelery</button>
+                <button class="Accesories uppercase" data-option="Accessory" onclick="sortData('Accessory')">Accesories</button>
+            </div>
+            <div class="products grid">
+                
+                    
+        
+            </div>
+        </section>
+    </div>
+    <!-- ______________________________________ -->
+</body>
+</html>
