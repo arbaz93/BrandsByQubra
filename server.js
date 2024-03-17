@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const { readFile, writeFile } = require('fs');
+const path = require('path');
 let count = 0;
-// readFile('./public/data/product-data.json', 'utf-8', (err, res) => {}
+
 // readFile('./public/data/product-data.json', 'utf-8', (err, res) => {
 //     let data = JSON.parse(res);
 //     data.map(d => {
@@ -17,14 +18,26 @@ let count = 0;
 
 app.use(express.static(__dirname));
 app.use(express.static('public'));
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
 res.sendFile(path.join(__dirname + '/public/index.html'));
 })
+
+// This is the route for admin Dashboard
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
- 
+// Creating routes for each product in JSON file
+readFile('./public/data/data.json', 'utf-8', (err, res) => {
+  let data = JSON.parse(res);
+  data.forEach(d => {
+    app.get(`/${d.id}`, (req, res) => {
+      res.sendFile(path.join(__dirname + '/public/product.html'));
+    })    
+    
+  })
+}) 
+
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

@@ -172,16 +172,20 @@
     right: 0;
     z-index: 10000;
     background-color: var(--background-color);
-    display: grid;
-    grid-template-rows: 40svh 1fr max-content 1fr;
-    height: 100svh;
-    width: 50svh;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
     color: rgba(var(--clr-100), .8);
     border: var(--border);
     transform: translateX(100%);
+    padding: 5rem;
+    gap: 2rem;
 }
 [data-translate-x="true"] {
     transform: translateX(0);
+}
+.selected-item-data {
+    grid-template-rows: 1fr 4fr 10svh;    
 }
 .selected-item-close {
     position: absolute;
@@ -191,12 +195,12 @@
     background: transparent;
     border: none;
     font-size: 1.2rem;
-    color: rgba(0, 0, 0, .5);
+    color: var(--background-color);
     transition: color 300ms linear;
 }
 .selected-item-close:hover,
 .selected-item-close:focus {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
 }
 .selected-item-close button {
 }
@@ -207,21 +211,22 @@
 
 .selected-item > .selected-item-image {
     padding: 0;
+    position: relative;
 }
 .selected-item-image > img {
     width: 100%;
-    max-height: 100%;
+    max-height: 100svh;
 }
 .selected-item-heading {
     font-size: var(--fs-300);
-    border-top: var(--border);
-    border-bottom: var(--border);
+    border: var(--border);
+    padding-inline: 1rem;
 }
 .selected-item-description {
     font-size: var(--fs-100);
-    border-top: var(--border);
-    border-bottom: var(--border);
-    padding-block: 1rem;
+    border: var(--border);
+    border-top: none;
+    padding-inline: 1rem;
 }
 .qty {
     justify-content: center;
@@ -232,15 +237,20 @@
     text-align: center;
     color: inherit;
     background: transparent;
-    border: none;
-    border-left: var(--border);
-    border-right: var(--border);
+    border: var(--border);
+    border-top: none;
     width: 80%;
 }
 .symbol {
     border: none;
+    border-left: var(--border);
+    border-bottom: var(--border);
     background: transparent;
     font-size: 1.5rem;
     width: 100%;
     color: inherit;
+}
+.plus {
+    border-left: none;
+    border-right: var(--border);
 }

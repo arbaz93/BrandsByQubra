@@ -2,6 +2,7 @@
 const productSection = document.querySelector(".products");
 const links = document.querySelectorAll(".shop-link");
 const sortBtns = document.querySelectorAll(".sort-btns > button");
+const sidePane = document.querySelector(".selected-item");
 let productsData = [];
 let pHeading = [];
 async function getData() {
@@ -102,9 +103,10 @@ const putDataInSidePane = target => {
     const targetId = target.dataset.id;
     productsData.map(data => {
         if (data.id == targetId) {
+            sidePane.dataset.translateX = "true"
             const image = document.querySelector(".selected-item-image > img").src = data.image;
-            const heading = document.querySelector(".selected-item-heading > h4").innerHTML = data.name;
-            const description = document.querySelector(".selected-item-description > p").innerHTML = data.description;
+            const heading = document.querySelector(".selected-item-heading > h4").innerText = data.name;
+            const description = document.querySelector(".selected-item-description > p").innerText = data.description;
             console.log(data)
 
         }
@@ -117,6 +119,8 @@ let addingEventListenerToProductHeadings = () => {
         })
     })
 }
+
+
 let qty = document.querySelector("#qty");
 document.querySelector(".minus").addEventListener('click', () => {
     if(qty.value > 1) {
@@ -127,4 +131,7 @@ document.querySelector(".plus").addEventListener('click', () => {
     if(qty.value < 99) {
         qty.value = Number(qty.value) + 1;
     }
+})
+document.querySelector(".selected-item-close").addEventListener("click", () => {
+    sidePane.dataset.translateX = "false";
 })
