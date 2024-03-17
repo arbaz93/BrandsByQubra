@@ -8,10 +8,11 @@ app.get('/', (req, res) => {
     .end();
 });
 app.get('/home', (req, res) => {
-    res
-      .status(200)
-      .send('YOu are in home')
-      .end();
+      app.use(express.static(__dirname));
+        app.use(express.static('public'));
+        app.get('*', function(req, res) {
+        res.sendFile(path.join(__dirname + '/public/index.html'));
+});
   })
  
 // Start the server
