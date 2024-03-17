@@ -32,7 +32,7 @@
     <script src="js/slide.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/slideup.js" defer></script>
-    <script src="js/fetchData.js" defer></script>
+    <script src="js/fetchData.js" type="module" defer></script>
 </head>
 <body >
     <div class="wrap" data-main="true">
@@ -159,29 +159,38 @@
             </section>
         </main>
         <!-- Shop Section -->
-        <section id="shop" class="shop" data-up="false">
-            <h2>Shop</h2>
-            <div class="selected-item">
+            <div class="selected-item" data-translate-x="false">
+                <button class="selected-item-close">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </button>
                 <div class="selected-item-image">
                     <img src="img/IMG 6172.JPG" alt="">
                 </div>
-                <div class="selected-item-heading">
+                <div class="flex selected-item-heading">
                     <h4 >DOlce</h4>
                 </div>
-                <div class="selected-item-description">
+                <div class="flex selected-item-description">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, perspiciatis. Aliquid et rerum sapiente dicta dolores tenetur alias officiis, minus id accusamus nisi sed, temporibus eos! Delectus voluptatum ullam ad?</p>
                 </div>
-                <div class="flex qty-btn">
-                    <button class="minus">-</button>
-                    <input type="number" name="" id="qty">
-                    <button class="plus"></button>
+                <div class="flex symbols qty">
+                    <button class="symbol minus">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <input type="text" id="qty" value="1">
+                    <button class="symbol plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
                 </div>
             </div>
+        <section id="shop" class="shop" data-up="false">
+            <h2>Shop</h2>
+
+
             <div class="flex sort-btns">
-                <button class="all uppercase" data-option="All" onclick="appendData()">all</button>
-                <button class="Bags uppercase" data-option="Bag" onclick="sortData('Bag')">Bags</button>
-                <button class="Jewelery uppercase" data-option="Jewelery" onclick="sortData('Jewelery')">Jewelery</button>
-                <button class="Accesories uppercase" data-option="Accessory" onclick="sortData('Accessory')">Accesories</button>
+                <button class="all uppercase" data-option="All">all</button>
+                <button class="Bags uppercase" data-option="Bag">Bags</button>
+                <button class="Jewelery uppercase" data-option="Jewelery">Jewelery</button>
+                <button class="Accesories uppercase" data-option="Accessory">Accesories</button>
             </div>
             <div class="products grid">
                 

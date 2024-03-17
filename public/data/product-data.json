@@ -5,6 +5,7 @@
         "image": "/img/IMG 6172.JPG",
         "type": "Bag",
         "price": "4000",
+        "description": "some description",
         "status": "new"
     },
     {
@@ -37,6 +38,7 @@
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
+        "description": "some description",
         "status": "new"
     },{
         "id": "B20",
@@ -76,6 +78,7 @@
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
+        "description": "some description",
         "status": "new"
     },{
         "id": "B20",
@@ -115,6 +118,7 @@
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
+        "description": "some description",
         "status": "new"
     },{
         "id": "B20",
@@ -154,6 +158,7 @@
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
+        "description": "some description",
         "status": "new"
     },{
         "id": "B20",
@@ -193,6 +198,7 @@
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
+        "description": "some description",
         "status": "new"
     }
 ]
