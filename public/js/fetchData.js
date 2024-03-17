@@ -4,7 +4,6 @@ const links = document.querySelectorAll(".shop-link");
 const sortBtns = document.querySelectorAll(".sort-btns > button");
 const sidePane = document.querySelector(".selected-item");
 let productsData = [];
-let pHeading = [];
 async function getData() {
     const request = await fetch("./data/data.json"); //getting data
     const data = await request.json(); // converting requested data into JSON
@@ -42,8 +41,6 @@ const appendData = () => {
             html = html + template;
             })
             productSection.innerHTML = html;
-            pHeading = document.querySelectorAll("#product-heading");
-            addingEventListenerToProductHeadings();
     });
 }
 const sortData = (type) => {
@@ -99,39 +96,3 @@ document.querySelector("[data-option='Accessory']").addEventListener('click', ()
     sortData("Accessory");
 })
 
-const putDataInSidePane = target => {
-    const targetId = target.dataset.id;
-    productsData.map(data => {
-        if (data.id == targetId) {
-            sidePane.dataset.translateX = "true"
-            const image = document.querySelector(".selected-item-image > img").src = data.image;
-            const heading = document.querySelector(".selected-item-heading > h4").innerText = data.name;
-            const description = document.querySelector(".selected-item-description > p").innerText = data.description;
-            console.log(data)
-
-        }
-    })
-}
-let addingEventListenerToProductHeadings = () => {
-    pHeading.forEach(heading => {
-        heading.addEventListener("click", () => {
-            putDataInSidePane(heading);
-        })
-    })
-}
-
-
-let qty = document.querySelector("#qty");
-document.querySelector(".minus").addEventListener('click', () => {
-    if(qty.value > 1) {
-        qty.value = Number(qty.value) - 1;
-    }
-})
-document.querySelector(".plus").addEventListener('click', () => {
-    if(qty.value < 99) {
-        qty.value = Number(qty.value) + 1;
-    }
-})
-document.querySelector(".selected-item-close").addEventListener("click", () => {
-    sidePane.dataset.translateX = "false";
-})
