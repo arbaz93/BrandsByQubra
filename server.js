@@ -7,6 +7,12 @@ app.get('/', (req, res) => {
     .send('Hello server is running')
     .end();
 });
+app.get('/home', (req, res) => {
+    res
+      .status(200)
+      .send('YOu are in home')
+      .end();
+  })
  
 // Start the server
 const PORT = process.env.PORT || 8080;
