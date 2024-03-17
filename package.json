@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "express": "^4.18.3"
-  }
+  },
+  "name": "nodeapp",
+  "version": "1.0.1",
+  "description": "myfirstnodedeploy",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbaz93/NodeApp.git"
+  },
+  "author": "Yousaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arbaz93/NodeApp/issues"
+  },
+  "homepage": "https://github.com/arbaz93/NodeApp#readme"
 }
