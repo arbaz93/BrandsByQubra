@@ -1,0 +1,23 @@
+.cart-icon {
+    display: none;
+}
+.admin-section {
+    min-height: 100svh;
+    padding-inline: 2rem;
+}
+.admin-section h1 {
+    color: white;
+}
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 2rem;
+}
+.add-item-form input,
+.add-item-form select {
+    width: 100%;
+    padding-block: 1rem;
+    font-size: 1.5rem;
+}

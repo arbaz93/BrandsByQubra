@@ -69,13 +69,13 @@
     gap: 1rem;
     border-top: var(--border);
 }
-.social-links i {
+.info .social-links i {
     margin-top: 1rem;
     font-size: 1.5rem;
     color: white;
     transition: color 300ms linear;
 }
-.social-links i:hover {
+.info .social-links i:hover {
     color: var(--highlight-color);
 }
 .contact .blank {
@@ -86,15 +86,20 @@
 .span-2 {
     grid-column: span 2;
 }
-@media (max-width: 750px) {
-    .contact {
-        min-height: 80svh;
-    }
-}
-@media (max-width: 690px) {
+@media (max-width: 850px) {
     .contact {
         grid-template-columns: 1fr;
-        grid-template-rows: 40svh 40svh 40svh max-content 40svh;
+        grid-template-rows: 40svh 40svh 50svh max-content 40svh;
         min-height: 90svh;
+    }
+    .qr {
+        width: 100%;
+    }
+    .qr-code {
+        max-width: 30%;
+        margin-bottom: 1rem;
+    }
+    .email {
+        word-wrap: break-word;
     }
 }

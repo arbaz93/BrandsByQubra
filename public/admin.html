@@ -1,13 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Brands by Qubra</title>
 
-    <script src="js/admin.js"></script>
+    <!-- font  families -->
+    <!-- font-family: "Montserrat", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- font-family: "Rubik", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/2c2c9f338f.js" crossorigin="anonymous" defer></script>
+
+    <!-- Css Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/borders.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <!-- js -->
+    <script src="js/nav.js" defer></script>
+    <script src="js/admin.js" defer></script>
+    <script src="./server.js"></script>
 </head>
+
 <body>
+    <div class="wrap">
+        <!-- Navigation -->
+        <nav class="grid" data-nav-collapsed="false">
+            <div class="cart-icon" data-menu-open="false" data-cart-hidden="true">
+                <div class="flex cart-btn">
+                    <p class="uppercase">Cart</p>
+                    <i class="fa-solid fa-cart-shopping">
+                        <span class="count">0</span>
+                    </i>
+                </div>
+                <div class="cart-items">
+
+
+                    <!-- CART item will come Here -->
+
+
+                    <a href="/order"><button class="cart-order uppercase">Order</button></a>
+                </div>
+            </div>
+            <div class="flex logo-section">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-q">ubra</i>
+                </a>
+            </div>
+            <div class="flex page-links">
+                <a href="/shop" class="page-link shop-link uppercase">Shop</a>
+                <a href="/about" class="page-link about-link uppercase">About</a>
+            </div>
+            <div class="flex contact-section">
+                <div class="flex social-links">
+                    <a href="#" class="link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="flex fourth-section">
+                    <a href="/contact" class="get-in-touch uppercase">Get in touch</a>
+                    <div class="nav-btn">
+                        <i class="bars btn fa-solid fa-bars-staggered" onclick="navOpen()"></i>
+                        <i class="cross btn fa-solid fa-xmark" onclick="navClose()"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Nav -->
+            <div class="nav-mobile">
+                <div class="flex page-links">
+                    <a href="/shop" class="page-link shop-link uppercase">Shop</a>
+                    <a href="/about" class="page-link about-link uppercase">About</a>
+                </div>
+                <a href="/contact" class="get-in-touch uppercase">Get in touch</a>
+                <div class="flex social-links">
+                    <a href="#" class="link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="link"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </nav>
+        <!-- ____________________________________________________ -->
+        <main class="admin-section">
+            <section>
+                <form class="add-item-form">
+                    <h1 class="uppercase">Add Item to store</h1>
+                    <input type="text" name="name" id="name" placeholder="Item Name" required/>
+                    <select name="type" required="" id="type" aria-placeholder="type">
+                                <option value="Bag">Bag</option>
+                                <option value="Jewelery">Jewelery</option>
+                                <option value="Accessory">Accessory</option>
+                                <option value="Other">Other</option>
+                    </select>
+                    <input type="number" name="price" id="price" placeholder="Price" required/>
+                    <input type="text" name="article" id="article" placeholder="Article`" required/>
+                    <input type="status" name="status" id="status" placeholder="Status"/>
+                    <input type="text" name="description" placeholder="Item Description" required>
+                    <input type="file" name="image" id="image" placeholder="Upload Image" required>
+                    <input type="submit" name="submit" id="submit-btn" placeholder="Submit">
+                </form>
+            </section>
+        </main>
     
+        <footer>
+            <p>@2023 codeBeast</p>
+        </footer>
 </body>
+
 </html>
