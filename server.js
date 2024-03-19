@@ -21,7 +21,16 @@ app.use(express.static('public'));
 app.get('/', function(req, res) {
 res.sendFile(path.join(__dirname + '/public/index.html'));
 })
-
+// This is the route for shop which is in the homepage
+app.get('/shop', (req, res) => {
+  res.sendFile(path.join(__dirname + '/public/index.html'));
+})
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname + '/public/about.html'));
+})
+app.get('/order', (req, res) => {
+  res.sendFile(path.join(__dirname + '/public/order.html'));
+})
 // This is the route for admin Dashboard
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/admin.html'));

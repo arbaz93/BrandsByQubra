@@ -1,5 +1,5 @@
 
-const productSection = document.querySelector(".products");
+const productSection = document.querySelector(".shop-items");
 const links = document.querySelectorAll(".shop-link");
 const sortBtns = document.querySelectorAll(".sort-btns > button");
 const sidePane = document.querySelector(".selected-item");
@@ -17,27 +17,22 @@ const appendData = () => {
         {
         productsData = response;
         response.forEach(product => {
-        
-        const template = `<article class="product flex">
-                            <div id="product-img">
-                            <div class="overlay ${product.status}"></div>
-                                <a href="#">
-                                    <img src="${product.image}">
-                                </a>
-                            </div>
-                            <div class="flex product-data">
-                                <div class="flex">
-                                    <a href="#">
-                                        <h4 id="product-heading" data-id=${product.id}>${product.name}</h4>
-                                    </a>
-                                    <p id="product-type">${product.type}</p>
-                                </div>
-                                <div class="flex">
-                                    <p id="product-prize" class="uppercase">PKR${product.price}</p>
-                                    <button class="cart"><i class=" fa-solid fa-cart-plus"></i></button>
-                                </div>
-                            </div>
-                        </article>`;
+
+        let span = Math.floor(Math.random() * 10);
+        let url = product.image;
+        const template = `<div class="shop-item span-${span}" style="background-image: url('${url}')">
+                    <p class="status">${product.status}</p>
+                    <div class="flex shop-item-data">
+                        <div class="shop-item-info">
+                                <p class="shop-item-name"><a href="/${product.id}">${product.name}</a></p>
+                                <p class="shop-item-type">${product.type}</p>
+                        </div>
+                        <div class="shop-item-buy">
+                            <p class="shop-item-price">${product.price}PKR</p>
+                            <i class="fa-solid fa-cart-plus" onclick="addToCart(this)" data-id="${product.id}"></i>
+                        </div>
+                    </div>
+                </div>`;
             html = html + template;
             })
             productSection.innerHTML = html;
@@ -51,32 +46,24 @@ const sortData = (type) => {
         };
     })
     
-    sortedData.forEach(product => {
-    
-    const template = `<article class="product flex">
-                        <div id="product-img">
-                        <div class="overlay ${product.status}"></div>
-                            <a href="#">
-                                <img src="${product.image}">
-                            </a>
+sortedData.forEach(product => {
+    let span = Math.floor(Math.random() * 10);
+    const template = `<div class="shop-item span-${span}" style="background-image: url('${product.image}')">
+                    <p class="status">${product.status}</p>
+                    <div class="flex shop-item-data">
+                        <div class="shop-item-info">
+                                <p class="shop-item-name"><a href="/${product.id}">${product.name}</a></p>
+                                <p class="shop-item-type">${product.type}</p>
                         </div>
-                        <div class="flex product-data">
-                            <div class="flex">
-                                <a href="#">
-                                    <h4 id="product-heading">${product.name}</h4>
-                                </a>
-                                <p id="product-type">${product.type}</p>
-                            </div>
-                            <div class="flex">
-                                <p id="product-prize" class="uppercase">PKR${product.price}</p>
-                                <button class="cart"><i class=" fa-solid fa-cart-plus"></i></button>
-                            </div>
+                        <div class="shop-item-buy">
+                            <p class="shop-item-price">${product.price}PKR</p>
+                            <i class="fa-solid fa-cart-plus" onclick="addToCart(this)" data-id="${product.id}"></i>
                         </div>
-                    </article>`;
+                    </div>
+                </div>`;
         html = html + template;
-    });
-    console.log(sortedData)
-    productSection.innerHTML = html;
+        })
+productSection.innerHTML = html;
 
 }
 links.forEach(link => {

@@ -1,0 +1,120 @@
+main {
+    display: flex;
+    min-height: 90svh;
+    padding: 2rem;
+    gap: 2rem;
+}
+@media (max-width: 750px) {
+    main {
+        flex-direction: column-reverse;
+    }
+}
+.cart-icon {
+    display: none;
+}
+.order-items-section {
+    width: 50%;
+    height: max-content;
+    border: var(--border);
+
+}
+.order-items {
+    height: min-content;
+    overflow: auto;
+    color: white;
+}
+.cart-item {
+    align-items: center;
+    justify-content: flex-start;
+}
+.cart-item > .cart-item-image {
+    max-width: 100px;
+}
+.cart-item-info {
+    flex-basis: 100%;
+    padding-left: 1rem;
+}
+.cart-item .cart-item-name-s {
+    font-size: 1.2rem;
+    max-width: 10ch;
+    font-weight: 100;
+    text-wrap: wrap;
+}
+.cart-item .cart-item-price {
+    font-size: .9rem;
+    font-weight: 400;
+}
+.cart-item .cart-item-delete-icon {
+    justify-self: flex-end;
+    width: 20%;
+}
+.total {
+    display: flex;
+    align-items: center;
+    height: 10svh;
+    color: white;
+    padding-left: 1rem;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+.total-price {
+    font-size: 1.5rem;
+}
+/* Form Styling */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-section {
+    display: flex;
+    flex-basis: 50%;
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+form > label {
+    color: white;
+}
+form input {
+    height: 3rem;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: var(--border);
+    font-size: 1.4rem;
+    padding-inline: .5rem;
+}
+form input:focus {
+    background-color: rgba(var(--clr-100), 1);
+    color: var(--background-color);
+}
+form textarea {
+    display: none;
+}
+[name="submit"] {
+    cursor: pointer;
+}
+[name="submit"]:hover {
+    background-color: rgba(var(--clr-100), 1);
+    color: var(--background-color);
+}
+@media (max-width: 750px) {
+    main {
+        flex-direction: column-reverse;
+    }
+    .order-items-section {
+        width: 100%;
+    }
+}
