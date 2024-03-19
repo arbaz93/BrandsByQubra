@@ -46,12 +46,12 @@
                     </i>
                 </div>
                 <div class="cart-items">
-                
-                
+
+
                     <!-- CART item will come Here -->
-                
-                
-                <a href="/order"><button class="cart-order uppercase">Order</button></a>
+
+
+                    <a href="/order"><button class="cart-order uppercase">Order</button></a>
                 </div>
             </div>
             <div class="flex logo-section">
@@ -70,7 +70,7 @@
                     <a href="#" class="link"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
                 <div class="flex fourth-section">
-                    <a href="" class="get-in-touch uppercase">Get in touch</a>
+                    <a href="/contact" class="get-in-touch uppercase">Get in touch</a>
                     <div class="nav-btn">
                         <i class="bars btn fa-solid fa-bars-staggered" onclick="navOpen()"></i>
                         <i class="cross btn fa-solid fa-xmark" onclick="navClose()"></i>
@@ -80,10 +80,10 @@
             <!-- Mobile Nav -->
             <div class="nav-mobile">
                 <div class="flex page-links">
-                    <a href="#" class="page-link shop-link uppercase">Shop</a>
+                    <a href="/shop" class="page-link shop-link uppercase">Shop</a>
                     <a href="/about" class="page-link about-link uppercase">About</a>
                 </div>
-                <a href="#" class="get-in-touch uppercase">Get in touch</a>
+                <a href="/contact" class="get-in-touch uppercase">Get in touch</a>
                 <div class="flex social-links">
                     <a href="#" class="link"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="link"><i class="fa-brands fa-facebook-f"></i></a>
@@ -92,39 +92,63 @@
             </div>
         </nav>
         <!-- ____________________________________________________ -->
-    
+
+            <h1 class="main-heading">CART</h1>
+            <p class="main-para uppercase">You can apply for order by filling the form below or you can directly contact us on WhatsApp or provided social media accounts.</p>
         <main>
             <section class="order-items-section">
                 <div class="order-items">
-                
+
                     <!-- CART item will come Here -->
-                
-                
+
+
                 </div>
                 <div class="total">
                     <p>Total Price: <span class="total-price"></span></p>
                 </div>
             </section>
-                <section class="form-section">
-                    <form class="order-form" action="https://formspree.io/f/mdoqlzed" method="POST">
-                            <label for="name"><span class="block">Name:</span>
-                            <input type="text" id="name" name="name" required>
-                            </label>
-                            <label for="Phone"><span class="block">Phone:</span>
-                            <input type="number" id="Phone" name="Phone" required>
-                            </label>
-                            <label for="email"><span class="block">Email</span>
-                            <input type="email" id="email" name="email" required>
-                            </label>
-                            <label for="message" hidden><span class="block">Message</span>
-                            <textarea type="text" id="message" name="message"></textarea>
-                            </label>
-                            <input type="submit" name="submit" id="send">
-                    </form>
-                </section>
+            <section class="form-section">
+              
+                <form id="fs-frm" class="order-form" name="registration-form" accept-charset="utf-8"
+                    action="https://formspree.io/f/mdoqlzed" method="post">
+                    <fieldset id="fs-frm-inputs">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                        <label for="phone">Phone</label>
+                        <input type="phone" name="phone" id="phone" placeholder="03XX-XXX-XXXX" required="">
+                        <label for="street-address">Street Address</label>
+                        <input type="text" name="street" id="street-address" placeholder="Street" required="">
+                        <fieldset class="locale">
+                            <legend>Locale</legend>
+                            <input type="text" name="city" placeholder="City" required="">
+                            <select name="state" required="" aria-placeholder="state">
+                                <option value="State">State</option>
+                                <option value="sindh">Sindh</option>
+                                <option value="blochistan">Blochistan</option>
+                                <option value="punjab">Punjab</option>
+                                <option value="NWFP">Khyber Pakhtunkhwa</option>
+                                <option value="gilgit">Gilgit-Baltistan</option>
+                                <option value="NWFP">Pakhtunkhwa</option>
+                            </select>
+                            <input type="text" name="postal-code" placeholder="postal code">
+                        </fieldset>
+                        <label for="note">Note</label>
+                        <textarea rows="2" name="note" id="note"
+                            placeholder="Include any additional information"></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
+                    </fieldset>
+                    <label for="message"><span>Message</span>
+                        <textarea type="text" id="message" name="message" ></textarea>
+                    </label>
+                    <input type="submit" value="ORDER">
+                    <p class="form-message uppercase">We will contact you shortly to confirm your order.</p>
+                </form>
+            </section>
         </main>
     </div>
     <!-- ______________________________________ -->
+    <script>
+    </script>
 </body>
 
 </html>

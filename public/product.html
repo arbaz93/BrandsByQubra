@@ -26,15 +26,32 @@
     <!-- js -->
     <script src="js/nav.js" defer></script>
     <script src="js/productPage.js" defer></script>
+    <script src="js/cart.js" defer></script>
 </head>
 <body >
     <div class="wrap" data-main="true">
         <!-- Navigation -->
-        <nav class="grid" data-nav-collapsed="false">
+  <nav class="grid" data-nav-collapsed="false">
+            <div class="cart-icon" data-menu-open="false" data-cart-hidden="true">
+                <div class="flex cart-btn">
+                    <p class="uppercase">Cart</p>
+                    <i class="fa-solid fa-cart-shopping">
+                        <span class="count">0</span>
+                    </i>
+                </div>
+                <div class="cart-items">
+
+
+                    <!-- CART item will come Here -->
+
+
+                    <a href="/order"><button class="cart-order uppercase">Order</button></a>
+                </div>
+            </div>
             <div class="flex logo-section">
                 <a href="#" class="logo">
                     <i class="fa-solid fa-q">ubra</i>
-                  </a>
+                </a>
             </div>
             <div class="flex page-links">
                 <a href="/shop" class="page-link shop-link uppercase">Shop</a>
@@ -47,7 +64,7 @@
                     <a href="#" class="link"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
                 <div class="flex fourth-section">
-                    <a href="" class="get-in-touch uppercase">Get in touch</a>
+                    <a href="/contact" class="get-in-touch uppercase">Get in touch</a>
                     <div class="nav-btn">
                         <i class="bars btn fa-solid fa-bars-staggered" onclick="navOpen()"></i>
                         <i class="cross btn fa-solid fa-xmark" onclick="navClose()"></i>
@@ -56,11 +73,11 @@
             </div>
             <!-- Mobile Nav -->
             <div class="nav-mobile">
-             <div class="flex page-links">
-                <a href="/shop" class="page-link shop-link uppercase">Shop</a>
-                <a href="/about" class="page-link about-link uppercase">About</a>
-            </div>
-                <a href="#" class="get-in-touch uppercase">Get in touch</a>
+                <div class="flex page-links">
+                    <a href="/shop" class="page-link shop-link uppercase">Shop</a>
+                    <a href="/about" class="page-link about-link uppercase">About</a>
+                </div>
+                <a href="/contact" class="get-in-touch uppercase">Get in touch</a>
                 <div class="flex social-links">
                     <a href="#" class="link"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="link"><i class="fa-brands fa-facebook-f"></i></a>
@@ -82,33 +99,12 @@
                 </div>
             </div>
                 <div class="add-to-cart">
-                    <div class="qty-input">
-                        <button class="minus"><i class="fa-solid fa-minus"></i></button>
-                        <input type="number" name="qty" id="qty" value="1" max="10" min="1">
-                        <button class="plus"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                    <button id="order" class="uppercase">Place Order</button>
+                    <button id="order" class="uppercase" data-id="" onclick="addToCart(this); orderPlaced()">Place Order</button>
+                    <a href="/order" data--order-placed="false" id="order">
+                        <button class="uppercase open-cart-button">Open CArt</button>
+                    </a>
                 </div>
         </section>
  
-    <!-- This form is used to place order -->
-    <!-- <form class="subscription-form outer-form" action="https://formsubmit.co/07dbe8fc9c09c1ad9a3aefbb70c092d5" method="POST">
-        <label for="name"><span class="block">Name:</span>
-        <input type="text" id="name" name="name" required>
-        </label>
-        <label for="surname"><span class="block">Surname:</span>
-        <input type="text" id="surname" name="surname" required>
-        </label>
-        <label for="email"><span class="block">Email</span>
-        <input type="email" id="email" name="email" required>
-        </label>
-        <label for="message"><span class="block">Message</span>
-        <textarea type="text" id="message" name="message" required maxlength="200"></textarea>
-        </label>
-        <p>You can directly reach us by this Email form...</p>
-        <input type="submit" name="submit" id="send">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-    </form> -->
 </body>
 </html>

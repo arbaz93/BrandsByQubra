@@ -4,6 +4,23 @@ main {
     padding: 2rem;
     gap: 2rem;
 }
+.main-heading,
+.main-para {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    max-width: 50ch;
+    margin: auto;
+}
+.main-heading {
+    font-size: var(--fs-400);
+    font-family: "montserrat", sans-serif;
+}
+.main-para {
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "montserrat", sans-serif;
+}
 @media (max-width: 750px) {
     main {
         flex-direction: column-reverse;
@@ -20,8 +37,10 @@ main {
 }
 .order-items {
     height: min-content;
+    max-height: 100svh;
     overflow: auto;
     color: white;
+    
 }
 .cart-item {
     align-items: center;
@@ -36,7 +55,7 @@ main {
 }
 .cart-item .cart-item-name-s {
     font-size: 1.2rem;
-    max-width: 10ch;
+    max-width: 100%;
     font-weight: 100;
     text-wrap: wrap;
 }
@@ -55,9 +74,6 @@ main {
     color: white;
     padding-left: 1rem;
     letter-spacing: 1px;
-    font-size: 1.2rem;
-}
-.total-price {
     font-size: 1.5rem;
 }
 /* Form Styling */
@@ -84,32 +100,7 @@ form {
     gap: 1rem;
     width: 100%;
 }
-form > label {
-    color: white;
-}
-form input {
-    height: 3rem;
-    width: 100%;
-    background-color: transparent;
-    color: white;
-    border: var(--border);
-    font-size: 1.4rem;
-    padding-inline: .5rem;
-}
-form input:focus {
-    background-color: rgba(var(--clr-100), 1);
-    color: var(--background-color);
-}
-form textarea {
-    display: none;
-}
-[name="submit"] {
-    cursor: pointer;
-}
-[name="submit"]:hover {
-    background-color: rgba(var(--clr-100), 1);
-    color: var(--background-color);
-}
+
 @media (max-width: 750px) {
     main {
         flex-direction: column-reverse;
@@ -117,4 +108,108 @@ form textarea {
     .order-items-section {
         width: 100%;
     }
+}
+
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* border, padding, margin, width */
+#fs-frm input:not([type="submit"]),
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: var(--border);
+  background-color: transparent;
+  padding: .75em 1rem;
+}
+form label,
+form legend {
+    color: white !important;
+}
+[type="submit"] {
+  border: var(--border) !important;
+  padding: .75em 1rem !important;
+}
+[type="submit"]:hover {
+  background-color: var(--background-color);
+  color: white !important;
+}
+
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+#fs-frm [type="submit"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+
+/* address, locale */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+    color: rgba(var(--clr-100), .4);
+    display: inline;
+}
+#fs-frm fieldset.locale select[name="state"]:active,
+#fs-frm fieldset.locale select[name="state"]:focus {
+    color: var(--background-color);
+}
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
+}
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
+}
+[for="message"] {
+    display: none !important;
+}
+form input:not(:last-of-type) {
+    margin-bottom: 1rem !important;
+}
+form input:focus {
+    background-color: rgba(var(--clr-100), .9) !important;
+    color: var(--background-color) !important;
+}
+select {
+    color: rgba(var(--clr-100), .4) !important;
+}
+select > option {
+    color: var(--background-color);
+}
+#note {
+    color: white !important;
+}
+.form-message {
+    color: white !important;
 }

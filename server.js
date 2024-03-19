@@ -31,6 +31,9 @@ app.get('/about', (req, res) => {
 app.get('/order', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/order.html'));
 })
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname + '/public/contact.html'));
+})
 // This is the route for admin Dashboard
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname + '/public/admin.html'));

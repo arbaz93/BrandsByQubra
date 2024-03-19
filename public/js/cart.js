@@ -9,6 +9,7 @@ const orderMessage = document.querySelector("#message");
 let allProducts;
 let cart = [];
 let order;
+console.log(document.querySelector(".cart-btn"))
 cartBtn.addEventListener("click", () => {
     if(cartMenuStatus.dataset.menuOpen == "false") {
         cartMenuStatus.dataset.menuOpen = "true";

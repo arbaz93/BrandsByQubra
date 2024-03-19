@@ -137,7 +137,6 @@ nav > .contact-section > .social-links {
     border: none !important;
     outline: var(--border);
     background-color: var(--background-color);
-    z-index: 100;
 }
 .cart-icon > .cart-btn {
     justify-content: space-between;
@@ -198,15 +197,16 @@ nav > .contact-section > .social-links {
     right: 0%;
     justify-content: stretch;
     background-color: var(--background-color);
+    width: 0;
     max-height:0svh;
     overflow-y: scroll;
-    width: calc(100% + 1px);
     border-top: var(--border);
     border-bottom: var(--border);
 }
 [data-menu-open="true"] .cart-items {
-    transition: max-height 300ms linear;
+    transition: max-height 100ms linear;
     max-height: 60svh;
+    min-width: calc(100% + 1px);
 }
 .cart-item {
     display: flex;

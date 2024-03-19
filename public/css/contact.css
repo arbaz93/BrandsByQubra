@@ -1,7 +1,7 @@
 .cart-icon {
     display: none;
 }
-.about-us {
+.contact {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr min-content;
@@ -10,10 +10,10 @@
     font-family: 'Rubik';
     min-height: 90svh;
 }
-.about-us article {
+.contact article {
     outline: var(--border);
 }
-.about-us .welcome {
+.contact .welcome {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,36 +23,62 @@
     letter-spacing: 2px;
     padding-inline: 1rem;
 }
-.about-us .image-1 {
+.contact .image-1 {
     background-image: url("/public/img/about-image/img1.JPG");
     background-size: cover;
     background-position: center 80%;
 }
-.about-us .heading {
+.contact .heading {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: var(--fs-400);
     font-family: "montserrat", sans-serif;
 }
-.about-us .heading h1 {
-    color: white;
-    transform: rotate(-90deg) translatey(-.5rem);
-}
-.about-us .info {
+.qr {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+}
+.qr-code {
+    max-width: 50%;
+}
+.contact .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 1rem;
+    gap: 1rem;
 }
-.about-us .info p {
+.contact .info p {
     max-width: 50ch;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
-.about-us .info p:first-child {
+.phone,
+.email {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.contact .info p:first-child {
     margin-bottom: 1rem;
 }
-.about-us .blank {
+.contact .social-links {
+    display: flex;
+    gap: 1rem;
+    border-top: var(--border);
+}
+.social-links i {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: color 300ms linear;
+}
+.social-links i:hover {
+    color: var(--highlight-color);
+}
+.contact .blank {
     background-color: #884c43;
     background-image: url(/public/img/about-image/img2.JPG);
     background-size: cover;
@@ -61,18 +87,14 @@
     grid-column: span 2;
 }
 @media (max-width: 750px) {
-    .about-us {
+    .contact {
         min-height: 80svh;
     }
 }
 @media (max-width: 690px) {
-    .about-us {
+    .contact {
         grid-template-columns: 1fr;
         grid-template-rows: 40svh 40svh 40svh max-content 40svh;
         min-height: 90svh;
-    }
-    .about-us .heading h1 {
-        transform: rotate(0deg) translatey(0);
-        font-size: var(--fs-400);
     }
 }
