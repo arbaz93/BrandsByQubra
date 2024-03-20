@@ -40,7 +40,7 @@ nav > .page-links {
 }
 nav > .contact-section > .fourth-section {
     margin: auto;
-    border-left: 2px solid white;
+    border-left: var(--border);
     padding-left: 1rem;
 }
 nav > .contact-section > .social-links {

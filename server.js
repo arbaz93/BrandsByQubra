@@ -1,21 +1,34 @@
+const apples = 30;
+module.exports = {apples}
 const express = require('express');
 const app = express();
 const { readFile, writeFile } = require('fs');
 const path = require('path');
 let count = 0;
+let prodData = [];
+const readDataFile = (filePath) => {
+  readFile(filePath, 'utf-8', (err, res) => {
+    let data = JSON.parse(res);
+      data.map(d => {
+        d.id = count;
+        count++;
+      })
+    prodData = data;
+  })
+}
+readDataFile('./public/data/data.json');
 
-readFile('./public/data/product-data.json', 'utf-8', (err, res) => {
-  let data = JSON.parse(res);
-  data.map(d => {
-    d.id = count;
-    count++;
-  })
-  let newData = JSON.stringify(data);
-  writeFile('./public/data/data.json', newData, (err, res) => {
-    console.log(res)
-  })
-});
-const addItem = () => { }
+const addItem = () => { 
+  let newData = JSON.stringify(prodData);
+    // console.log(newData)
+  // writeFile('./public/data/data.json', newData, (err, res) => {
+  // })
+}
+setTimeout(() => {
+  addItem();
+}, 1000)
+// export default count;
+module.exports = addItem;
 app.use(express.static(__dirname));
 app.use(express.static('public'));
 app.get('/', function (req, res) {
@@ -36,7 +49,7 @@ app.get('/contact', (req, res) => {
 })
 // This is the route for admin Dashboard
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname + '/public/admin.html'));
+  res.sendFile(path.join(__dirname + '/admin.html'));
 })
 
 // Creating routes for each product in JSON file

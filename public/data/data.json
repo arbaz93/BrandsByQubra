@@ -1,233 +1,204 @@
 [
     {
-        "id": 0,
+        "id": "B20",
         "name": "D&G new bag series",
         "image": "/img/IMG 6172.JPG",
         "type": "Bag",
         "price": "4000",
-        "description": "A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?",
-        "article": "B11",
+        "description": "some description",
         "status": "new"
     },
     {
-        "id": 1,
+        "id": "B21",
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
         "price": "2900",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 2,
+        "id": "J22",
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
         "price": "1500",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 3,
+        "id": "J23",
         "name": "Parka",
         "image": "/img/IMG 6195.JPG",
         "type": "Bag",
         "price": "1800",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 4,
+        "id": "B24",
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
-        "description": "A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?",
-        "article": "B11",
+        "description": "some description",
         "status": "new"
-    },
-    {
-        "id": 5,
+    },{
+        "id": "B20",
         "name": "D&G new bag series",
         "image": "/img/IMG 6172.JPG",
         "type": "Bag",
         "price": "2000",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 6,
+        "id": "B21",
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
         "price": "2900",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 7,
+        "id": "J22",
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
         "price": "1500",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 8,
+        "id": "J23",
         "name": "Parka",
         "image": "/img/IMG 6195.JPG",
         "type": "Accessory",
         "price": "1800",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 9,
+        "id": "B24",
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
-        "description": "A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?",
-        "article": "B11",
+        "description": "some description",
         "status": "new"
-    },
-    {
-        "id": 10,
+    },{
+        "id": "B20",
         "name": "D&G new bag series",
         "image": "/img/IMG 6172.JPG",
         "type": "Bag",
         "price": "2000",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 11,
+        "id": "B21",
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
         "price": "2900",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 12,
+        "id": "J22",
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
         "price": "1500",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 13,
+        "id": "J23",
         "name": "Parka",
         "image": "/img/IMG 6195.JPG",
         "type": "Accessory",
         "price": "1800",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 14,
+        "id": "B24",
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
-        "description": "A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?",
-        "article": "B11",
+        "description": "some description",
         "status": "new"
-    },
-    {
-        "id": 15,
+    },{
+        "id": "B20",
         "name": "D&G new bag series",
         "image": "/img/IMG 6172.JPG",
         "type": "Accessory",
         "price": "2000",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 16,
+        "id": "B21",
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
         "price": "2900",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 17,
+        "id": "J22",
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
         "price": "1500",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 18,
+        "id": "J23",
         "name": "Parka",
         "image": "/img/IMG 6195.JPG",
         "type": "Bag",
         "price": "1800",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 19,
+        "id": "B24",
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
-        "description": "A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?",
-        "article": "B11",
+        "description": "some description",
         "status": "new"
-    },
-    {
-        "id": 20,
+    },{
+        "id": "B20",
         "name": "D&G new bag series",
         "image": "/img/IMG 6172.JPG",
         "type": "Bag",
         "price": "2000",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 21,
+        "id": "B21",
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
         "price": "2900",
-        "article": "B11",
         "status": "new"
     },
     {
-        "id": 22,
+        "id": "J22",
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
         "price": "1500",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 23,
+        "id": "J23",
         "name": "Parka",
         "image": "/img/IMG 6195.JPG",
         "type": "Accessory",
         "price": "1800",
-        "article": "B11",
         "status": "sale"
     },
     {
-        "id": 24,
+        "id": "B24",
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
-        "description": "A place where books hang out waiting to be grabbed. But don't be too grabby now, ya hear?",
-        "article": "B11",
+        "description": "some description",
         "status": "new"
     }
 ]

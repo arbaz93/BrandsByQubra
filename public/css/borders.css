@@ -1,10 +1,13 @@
 :root {
-    --border: 1px solid rgb(0, 0, 0, 1);
     --border: 1px solid rgb(255, 255, 255, 1);
+    --border: 1px solid rgb(0, 0, 0, 1);
 }
 
 nav > *:nth-child(1) {
     border: var(--border);
+}
+nav > *:nth-child(2) {
+    border-left: var(--border);
 }
 nav > *:nth-child(2),
 nav > *:nth-child(3) {
@@ -13,9 +16,11 @@ nav > *:nth-child(3) {
     border-top: var(--border);
 }
 nav > *:nth-child(4) {
+    border-top: var(--border);
     border-bottom: var(--border);
     border-right: var(--border);
 }
+
 
 .product-image {
     border: var(--border);
@@ -44,5 +49,8 @@ nav > *:nth-child(4) {
     }
     .product-name {
         border-bottom: var(--border);
+    }
+    nav > *:nth-child(4) {
+        border-left: var(--border);
     }
 }
