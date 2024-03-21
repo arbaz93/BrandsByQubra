@@ -31,7 +31,7 @@
 
     <!-- js -->
     <script src="js/nav.js" defer></script>
-    <script src="admin.js" type="module" defer></script>
+    <script src="js/admin.js" defer></script>
 </head>
 
 <body>
@@ -94,7 +94,7 @@
         <!-- ____________________________________________________ -->
         <main class="admin-section">
             <section>
-                <form class="add-item-form">
+                <form action="/api" method="post" class="add-item-form">
                     <h1 class="uppercase">Add Item to store</h1>
                     <input type="text" name="name" id="name" placeholder="Item Name" required/>
                     <select name="type" required="" id="type" aria-placeholder="type">
@@ -107,9 +107,16 @@
                     <input type="text" name="article" id="article" placeholder="Article`" required/>
                     <input type="status" name="status" id="status" placeholder="Status"/>
                     <input type="text" name="description" placeholder="Item Description" required>
+                    <input type="text" name="operation" value="add-item" hidden>
                     <input type="file" name="image" id="image" placeholder="Upload Image" required>
                     <input type="submit" name="submit" id="submit-btn" placeholder="Submit">
                 </form>
+            </section>
+            <section class="total-items">
+                
+                
+                
+                
             </section>
         </main>
     

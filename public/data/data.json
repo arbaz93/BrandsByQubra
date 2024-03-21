@@ -1,15 +1,6 @@
 [
     {
-        "id": "B20",
-        "name": "D&G new bag series",
-        "image": "/img/IMG 6172.JPG",
-        "type": "Bag",
-        "price": "4000",
-        "description": "some description",
-        "status": "new"
-    },
-    {
-        "id": "B21",
+        "id": 0,
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
@@ -17,7 +8,7 @@
         "status": "new"
     },
     {
-        "id": "J22",
+        "id": 1,
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
@@ -25,47 +16,7 @@
         "status": "sale"
     },
     {
-        "id": "J23",
-        "name": "Parka",
-        "image": "/img/IMG 6195.JPG",
-        "type": "Bag",
-        "price": "1800",
-        "status": "sale"
-    },
-    {
-        "id": "B24",
-        "name": "Levi's",
-        "image": "/img/IMG 6172.JPG",
-        "type": "Jewelery",
-        "price": "4000",
-        "description": "some description",
-        "status": "new"
-    },{
-        "id": "B20",
-        "name": "D&G new bag series",
-        "image": "/img/IMG 6172.JPG",
-        "type": "Bag",
-        "price": "2000",
-        "status": "new"
-    },
-    {
-        "id": "B21",
-        "name": "Velvel bag by Dolphin",
-        "image": "/img/IMG 6177.JPG",
-        "type": "Bag",
-        "price": "2900",
-        "status": "new"
-    },
-    {
-        "id": "J22",
-        "name": "New series by Grace",
-        "image": "/img/IMG 6190.JPG",
-        "type": "Jewelery",
-        "price": "1500",
-        "status": "sale"
-    },
-    {
-        "id": "J23",
+        "id": 2,
         "name": "Parka",
         "image": "/img/IMG 6195.JPG",
         "type": "Accessory",
@@ -73,23 +24,16 @@
         "status": "sale"
     },
     {
-        "id": "B24",
+        "id": 3,
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
         "description": "some description",
         "status": "new"
-    },{
-        "id": "B20",
-        "name": "D&G new bag series",
-        "image": "/img/IMG 6172.JPG",
-        "type": "Bag",
-        "price": "2000",
-        "status": "new"
     },
     {
-        "id": "B21",
+        "id": 4,
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
@@ -97,7 +41,7 @@
         "status": "new"
     },
     {
-        "id": "J22",
+        "id": 5,
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
@@ -105,63 +49,16 @@
         "status": "sale"
     },
     {
-        "id": "J23",
-        "name": "Parka",
-        "image": "/img/IMG 6195.JPG",
-        "type": "Accessory",
-        "price": "1800",
-        "status": "sale"
-    },
-    {
-        "id": "B24",
+        "id": 7,
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
         "description": "some description",
         "status": "new"
-    },{
-        "id": "B20",
-        "name": "D&G new bag series",
-        "image": "/img/IMG 6172.JPG",
-        "type": "Accessory",
-        "price": "2000",
-        "status": "new"
     },
     {
-        "id": "B21",
-        "name": "Velvel bag by Dolphin",
-        "image": "/img/IMG 6177.JPG",
-        "type": "Bag",
-        "price": "2900",
-        "status": "new"
-    },
-    {
-        "id": "J22",
-        "name": "New series by Grace",
-        "image": "/img/IMG 6190.JPG",
-        "type": "Jewelery",
-        "price": "1500",
-        "status": "sale"
-    },
-    {
-        "id": "J23",
-        "name": "Parka",
-        "image": "/img/IMG 6195.JPG",
-        "type": "Bag",
-        "price": "1800",
-        "status": "sale"
-    },
-    {
-        "id": "B24",
-        "name": "Levi's",
-        "image": "/img/IMG 6172.JPG",
-        "type": "Jewelery",
-        "price": "4000",
-        "description": "some description",
-        "status": "new"
-    },{
-        "id": "B20",
+        "id": 8,
         "name": "D&G new bag series",
         "image": "/img/IMG 6172.JPG",
         "type": "Bag",
@@ -169,7 +66,7 @@
         "status": "new"
     },
     {
-        "id": "B21",
+        "id": 9,
         "name": "Velvel bag by Dolphin",
         "image": "/img/IMG 6177.JPG",
         "type": "Bag",
@@ -177,7 +74,7 @@
         "status": "new"
     },
     {
-        "id": "J22",
+        "id": 10,
         "name": "New series by Grace",
         "image": "/img/IMG 6190.JPG",
         "type": "Jewelery",
@@ -185,7 +82,7 @@
         "status": "sale"
     },
     {
-        "id": "J23",
+        "id": 11,
         "name": "Parka",
         "image": "/img/IMG 6195.JPG",
         "type": "Accessory",
@@ -193,12 +90,24 @@
         "status": "sale"
     },
     {
-        "id": "B24",
+        "id": 12,
         "name": "Levi's",
         "image": "/img/IMG 6172.JPG",
         "type": "Jewelery",
         "price": "4000",
         "description": "some description",
         "status": "new"
+    },
+    {
+        "name": "usama",
+        "type": "Bag",
+        "price": "1000",
+        "article": "N11",
+        "status": "TEst",
+        "description": "somthing",
+        "operation": "add-item",
+        "image": "1.png",
+        "submit": "Submit",
+        "id": 15
     }
 ]

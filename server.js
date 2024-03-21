@@ -1,9 +1,7 @@
-const apples = 30;
-module.exports = {apples}
 const express = require('express');
 const app = express();
 const { readFile, writeFile } = require('fs');
-const path = require('path');
+const path = require('path'); 
 let count = 0;
 let prodData = [];
 const readDataFile = (filePath) => {
@@ -18,17 +16,45 @@ const readDataFile = (filePath) => {
 }
 readDataFile('./public/data/data.json');
 
-const addItem = () => { 
+
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(express.json());
+app.post("/api", (request, response) => {
+  let data = request.body;
+  let operation = data.operation;
+  console.log(data)
+  if (operation == "add-item") {
+    addItem(data);
+  }
+  if (operation == "remove-item") {
+    removeItem(data);
+  }
+  response.json({
+    status: "Data Upload Successfull",
+    data: data
+  })
+  
+})
+const addItem = (item) => {
+  prodData.push(item);
   let newData = JSON.stringify(prodData);
-    // console.log(newData)
-  // writeFile('./public/data/data.json', newData, (err, res) => {
-  // })
+    writeFile('./public/data/data.json', newData, (err, res) => {
+  })
 }
-setTimeout(() => {
-  addItem();
-}, 1000)
+const removeItem = (item) => {
+  let newData = prodData.map((product, i) => {
+    if(product.id == item.id) {
+      prodData.splice(i, 1)
+    }
+  })
+  let sData = JSON.stringify(prodData);
+    writeFile('./public/data/data.json', sData, (err, res) => {
+      console.log("item removed")
+  })
+} 
 // export default count;
-module.exports = addItem;
 app.use(express.static(__dirname));
 app.use(express.static('public'));
 app.get('/', function (req, res) {
@@ -49,7 +75,8 @@ app.get('/contact', (req, res) => {
 })
 // This is the route for admin Dashboard
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname + '/admin.html'));
+  console.log(req)
+  res.sendFile(path.join(__dirname + '/public/admin.html'));
 })
 
 // Creating routes for each product in JSON file
