@@ -10,6 +10,7 @@ const getProductData = async () => {
     
     let currentPageProduct = data.filter(el => currentRoute == el.id)[0]
     
+    const fullImage = document.querySelector(".full-image-src").src = `${currentPageProduct.image}`;
     const image = document.querySelector(".product-route-image").style.backgroundImage = `url("${currentPageProduct.image}")`;
     const description = document.querySelector(".product-route-description > p").innerText = currentPageProduct.description;
     const status = document.querySelector(".price > .status").innerText = currentPageProduct.status;
@@ -20,4 +21,10 @@ const getProductData = async () => {
 //     let btn = document.querySelector("a#order");
 //     btn.dataset.OrderPlaced = "true";
 // }
+document.querySelector(".product-route-image").addEventListener("click", () => {
+    document.querySelector(".full-image").dataset.full = true;
+})
+document.querySelector(".cross").addEventListener("click", () => {
+    document.querySelector(".full-image").dataset.full = false;
+})
 getProductData()

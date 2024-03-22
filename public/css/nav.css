@@ -1,6 +1,6 @@
 :root {
     --nav-h: 10svh;
-    --nav-mobile-clr: 6, 11, 25;
+    --nav-mobile-clr: 230, 233, 241;
     --fs-nav-100: 1.5rem;
     --fs-nav-200: 2rem;
     --content: 0;
@@ -121,7 +121,7 @@ nav > .contact-section > .social-links {
         font-size: var(--fs-nav-100);
     }
     .nav-mobile > .get-in-touch {
-            border-top: 2px solid white;
+            border-top: 2px solid rgba(0,0,0, .8);
             padding-block: 1rem;
     }
 }
