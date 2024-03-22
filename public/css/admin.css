@@ -1,3 +1,6 @@
+body {
+    display: none;
+}
 .cart-icon {
     display: none;
 }

@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr min-content;
-    color: white;
+    color: rgba(0, 0, 0, .8);
     /* font-family: "montserrat", sans-serif; */
     font-family: 'Rubik';
     min-height: 90svh;
@@ -40,6 +40,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 .qr-code {
     max-width: 50%;
@@ -68,11 +69,12 @@
     display: flex;
     gap: 1rem;
     border-top: var(--border);
+    justify-content: center;
 }
 .info .social-links i {
     margin-top: 1rem;
     font-size: 1.5rem;
-    color: white;
+    color: rgba(0, 0, 0, .8);
     transition: color 300ms linear;
 }
 .info .social-links i:hover {

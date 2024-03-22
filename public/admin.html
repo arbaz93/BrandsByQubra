@@ -94,7 +94,7 @@
         <!-- ____________________________________________________ -->
         <main class="admin-section">
             <section>
-                <form action="/api" method="post" class="add-item-form">
+                <form action="/api" method="post" enctype="multipart/form-data" class="add-item-form">
                     <h1 class="uppercase">Add Item to store</h1>
                     <input type="text" name="name" id="name" placeholder="Item Name" required/>
                     <select name="type" required="" id="type" aria-placeholder="type">

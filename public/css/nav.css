@@ -153,7 +153,9 @@ nav > .contact-section > .social-links {
 [data-menu-open="true"] > .cart-btn >  p {
     display: inline;
 }
-
+[data-cart-hidden="true"] {
+    display: none;
+}
 .cart-icon > .cart-btn > i > .count {
     font-size: 8px;
     transition: color .2s linear;
@@ -166,11 +168,11 @@ nav > .contact-section > .social-links {
     width: 100%;
     padding-block: 1rem;
     border: var(--border);
-    background-color: rgba(var(--clr-100), .8);
+    background-color: rgba(var(--clr-100), .5);
+    background-color: var(--background-color);
 }
 .cart-order:hover {
-    background-color: rgba(0,0,0, .8);
-    color: rgba(var(--clr-100), .8);
+    color: rgba(var(--clr-100), 1);
 }
 ::-webkit-scrollbar {
   width: 5px;

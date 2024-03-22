@@ -17,11 +17,10 @@ const appendData = () => {
         {
         productsData = response;
         response.forEach(product => {
-
-        let span = Math.floor(Math.random() * 10);
-        let url = product.image;
-        const template = `<div class="shop-item span-${span}" style="background-image: url('${url}')">
-                    <p class="status">${product.status}</p>
+        const s = (product.status === "" || product.status === null) ? "none" : "block";             
+        const template = `<div class="shop-item">
+                    <p class="status" style="display:${s}">${product.status}</p>
+                    <a href="/${product.id}"><img src="${product.image}" alt=""></a>
                     <div class="flex shop-item-data">
                         <div class="shop-item-info">
                                 <p class="shop-item-name"><a href="/${product.id}">${product.name}</a></p>
@@ -38,6 +37,7 @@ const appendData = () => {
             productSection.innerHTML = html;
     });
 }
+appendData()
 const sortData = (type) => {
     let html = '';
     let sortedData = productsData.filter(d => {
@@ -47,9 +47,9 @@ const sortData = (type) => {
     })
     
 sortedData.forEach(product => {
-    let span = Math.floor(Math.random() * 10);
-    const template = `<div class="shop-item span-${span}" style="background-image: url('${product.image}')">
+    const template = `<div class="shop-item">
                     <p class="status">${product.status}</p>
+                    <a href="/${product.id}"><img src="${product.image}" alt=""></a>
                     <div class="flex shop-item-data">
                         <div class="shop-item-info">
                                 <p class="shop-item-name"><a href="/${product.id}">${product.name}</a></p>

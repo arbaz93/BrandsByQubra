@@ -10,15 +10,14 @@ const getProductData = async () => {
     
     let currentPageProduct = data.filter(el => currentRoute == el.id)[0]
     
+    const image = document.querySelector(".product-route-image").style.backgroundImage = `url("${currentPageProduct.image}")`;
     const description = document.querySelector(".product-route-description > p").innerText = currentPageProduct.description;
     const status = document.querySelector(".price > .status").innerText = currentPageProduct.status;
     const name = document.querySelector(".product-route-name").innerText = currentPageProduct.name;
     const id = document.querySelector("#order").dataset.id = currentPageProduct.id;
 }
-function orderPlaced() {
-    let btn = document.querySelector("a#order");
-    btn.dataset.OrderPlaced = "true";
-    console.log("loaded")
-}
+// function orderPlaced() {
+//     let btn = document.querySelector("a#order");
+//     btn.dataset.OrderPlaced = "true";
+// }
 getProductData()
-console.log(currentRoute)

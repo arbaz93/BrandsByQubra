@@ -1,5 +1,9 @@
+:root {
+    --text-clr-white: rgba(255, 255, 255, .8)
+}
 main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     min-height: 90svh;
     padding: 2rem;
     gap: 2rem;
@@ -8,10 +12,11 @@ main {
 .main-para {
     text-align: center;
     padding: 1rem;
-    color: white;
+    color: rgba(var(--clr-100), .8);
     max-width: 50ch;
     margin: auto;
 }
+
 .main-heading {
     font-size: var(--fs-400);
     font-family: "montserrat", sans-serif;
@@ -21,17 +26,26 @@ main {
     letter-spacing: 1px;
     font-family: "montserrat", sans-serif;
 }
+.whats-app-qr {
+    padding-bottom: 2rem;
+    border-bottom: var(--border);
+    margin-inline: 2rem;
+}
+.whats-app-qr > img {
+    display: block;
+    max-width: 150px;
+    margin: auto;
+}
 @media (max-width: 750px) {
     main {
-        flex-direction: column-reverse;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 .cart-icon {
     display: none;
 }
 .order-items-section {
-    width: 50%;
-    height: max-content;
     border: var(--border);
 
 }
@@ -39,7 +53,9 @@ main {
     height: min-content;
     max-height: 100svh;
     overflow: auto;
-    color: white;
+    color: var(--text-clr-white);
+    background-color: rgba(var(--clr-100), .8);
+    
     
 }
 .cart-item {
@@ -71,7 +87,7 @@ main {
     display: flex;
     align-items: center;
     height: 10svh;
-    color: white;
+    color: rgba(var(--clr-100), .8);
     padding-left: 1rem;
     letter-spacing: 1px;
     font-size: 1.5rem;
@@ -89,25 +105,24 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.form-section {
-    display: flex;
-    flex-basis: 50%;
-
-}
 form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    margin-top: -4px;
 }
-
+main .main-heading {
+    grid-column: span 2;
+}
 @media (max-width: 750px) {
-    main {
-        flex-direction: column-reverse;
-    }
     .order-items-section {
         width: 100%;
+        max-height: 150svh !important;
     }
+    main .main-heading {
+    grid-column: auto;
+}
 }
 
 #fs-frm input,
@@ -141,15 +156,15 @@ form {
 }
 form label,
 form legend {
-    color: white !important;
+    color: rgba(var(--clr-100), .8) !important;
 }
 [type="submit"] {
   border: var(--border) !important;
   padding: .75em 1rem !important;
 }
 [type="submit"]:hover {
-  background-color: var(--background-color);
-  color: white !important;
+  background-color: var(--highlight-color);
+  color: var(--text-clr-white) !important;
 }
 
 #fs-frm [type="text"],
@@ -173,7 +188,7 @@ form legend {
 #fs-frm fieldset.locale input[name="city"],
 #fs-frm fieldset.locale select[name="state"],
 #fs-frm fieldset.locale input[name="postal-code"] {
-    color: rgba(var(--clr-100), .4);
+    color: rgba(var(--clr-100), .8);
     display: inline;
 }
 #fs-frm fieldset.locale select[name="state"]:active,
@@ -198,18 +213,23 @@ form input:not(:last-of-type) {
     margin-bottom: 1rem !important;
 }
 form input:focus {
-    background-color: rgba(var(--clr-100), .9) !important;
+    background-color: rgba(var(--clr-100), .8) !important;
     color: var(--background-color) !important;
 }
 select {
-    color: rgba(var(--clr-100), .4) !important;
+    color: rgba(var(--clr-100), .8) !important;
 }
 select > option {
     color: var(--background-color);
 }
 #note {
-    color: white !important;
+    color: rgba(var(--clr-100), .8) !important;
 }
 .form-message {
-    color: white !important;
+    color: rgba(var(--clr-100), .8) !important;
+}
+.empty {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: rgba(var(--clr-100), .7);
 }

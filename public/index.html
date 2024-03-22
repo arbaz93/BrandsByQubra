@@ -67,7 +67,7 @@
                 </a>
             </div>
             <div class="flex page-links">
-                <a href="#" class="page-link shop-link uppercase">Shop</a>
+                <a href="#shop" class="page-link shop-link uppercase">Shop</a>
                 <a href="/about" class="page-link about-link uppercase">About</a>
             </div>
             <div class="flex contact-section">
@@ -194,6 +194,21 @@
             </div>
             <div class="shop-items grid">
                 
+                <div class="shop-item span-${span}" style="background-image: url('${url}')">
+                    <p class="status">20% OFF</p>
+                    <img src="/public//img/IMG_6123.JPG" alt="">
+                    <div class="flex shop-item-data">
+                        <div class="shop-item-info">
+                                <p class="shop-item-name"><a href="/${product.id}">GUcci</a></p>
+                                <p class="shop-item-type">Bag</p>
+                        </div>
+                        <div class="shop-item-buy">
+                            <p class="shop-item-price">2000PKR</p>
+                            <i class="fa-solid fa-cart-plus" onclick="addToCart(this)" data-id="${product.id}"></i>
+                        </div>
+                    </div>
+                </div>;
+
 
             </div>
         <footer>

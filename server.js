@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const fileUpload = require('express-fileupload');
 const { readFile, writeFile } = require('fs');
 const path = require('path'); 
 let count = 0;
@@ -12,21 +13,21 @@ const readDataFile = (filePath) => {
         count++;
       })
     prodData = data;
+    giveItemsIds()
   })
 }
 readDataFile('./public/data/data.json');
-
 
 app.use(express.urlencoded({
   extended: true
 }));
 app.use(express.json());
+app.use(fileUpload());
 app.post("/api", (request, response) => {
   let data = request.body;
   let operation = data.operation;
-  console.log(data)
   if (operation == "add-item") {
-    addItem(data);
+    addItem(request);
   }
   if (operation == "remove-item") {
     removeItem(data);
@@ -37,23 +38,39 @@ app.post("/api", (request, response) => {
   })
   
 })
-const addItem = (item) => {
+const addItem = (data) => {
+  const item =  data.body;
+  let image = data.files.image;
+  item.image = './img/' + image.name;
+  image.mv(__dirname + '/public/img/' + image.name);
   prodData.push(item);
+  console.log(item)
   let newData = JSON.stringify(prodData);
     writeFile('./public/data/data.json', newData, (err, res) => {
   })
+  readDataFile('./public/data/data.json');
 }
 const removeItem = (item) => {
   let newData = prodData.map((product, i) => {
     if(product.id == item.id) {
       prodData.splice(i, 1)
     }
+    readDataFile('./public/data/data.json');
   })
   let sData = JSON.stringify(prodData);
     writeFile('./public/data/data.json', sData, (err, res) => {
       console.log("item removed")
   })
 } 
+const giveItemsIds = () => {
+  prodData.forEach((prod, i) => {
+    prod.id = i
+  })
+  let newData = JSON.stringify(prodData);
+    writeFile('./public/data/data.json', newData, (err, res) => {
+  })
+}
+
 // export default count;
 app.use(express.static(__dirname));
 app.use(express.static('public'));

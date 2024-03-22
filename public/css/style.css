@@ -1,6 +1,6 @@
 :root {
     --background-color: rgb(230, 233, 241);
-    --highlight-color: rgb(240, 240, 240);
+    --highlight-color: rgb(103, 65, 241);
     --clr-100:  0,0,0;
 
     /* Font sizes */
@@ -33,11 +33,10 @@ body {
 .wrap {
     overflow-x: hidden;
     position: relative;
+    scroll-behavior: smooth;
+
 }
 
-[data-main="true"] {
-    overflow-y: hidden;
-}
 button {
     font: inherit;
     cursor: pointer;
@@ -65,12 +64,6 @@ a:hover {
     position: relative;
     transition: transform 300ms linear;
     height: 90svh;
-}
-.container[data-translate-y="false"] {
-    transform: translateY(0);
-}
-.container[data-translate-y="true"] {
-    transform: translateY(-150svh);
 }
 
 .page {

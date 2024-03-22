@@ -9,14 +9,12 @@ const orderMessage = document.querySelector("#message");
 let allProducts;
 let cart = [];
 let order;
-console.log(document.querySelector(".cart-btn"))
 cartBtn.addEventListener("click", () => {
     if(cartMenuStatus.dataset.menuOpen == "false") {
         cartMenuStatus.dataset.menuOpen = "true";
     } else {
         cartMenuStatus.dataset.menuOpen = "false";
     }
-    console.log("loaded")
 });
 const getData = async () => {
     const request = await fetch('./data/data.json');
@@ -26,9 +24,18 @@ const getData = async () => {
 const checkWheatherCartIsEmpty = () => {
     if(window.sessionStorage.getItem("bbQubraCart") == null || window.sessionStorage.getItem("bbQubraCart") ==  '[]') {
         document.querySelector(".cart-icon").dataset.cartHidden = "true"
+        if(window.location.pathname === "/order") {
+            document.querySelector(".empty").style.display = "block"
+            document.querySelector(".tp").style.display = "none"
+        }
     } else {
         document.querySelector(".cart-icon").dataset.cartHidden = "false"
+        if(window.location.pathname === "/order") {
+            document.querySelector(".empty").style.display = "none"
+            document.querySelector(".tp").style.display = "block"
+        }
     }
+   
 }
 const updateCart = () => {
     let data = JSON.parse(window.sessionStorage.getItem("bbQubraCart"));
@@ -97,7 +104,6 @@ const updatePrice = () => {
         Type: ${el.type} \n
         Price: ${el.price}PKR \n\n\n`;
     })
-        console.log(order)
     totalPrice.innerText = price;
     orderMessage.value = order + "Total Price: " + price + "PKR";
 }
@@ -108,8 +114,6 @@ const removeFromCart = (itemId, item) => {
         if(cart[i]["id"] == itemId) {
             cart.splice(i, 1);
             currentItem.remove();
-            console.log("removed")
-            console.log(itemId)
         break;    
         }
     }

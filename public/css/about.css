@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr min-content;
-    color: white;
+    color: rgba(0, 0, 0, .8);
     /* font-family: "montserrat", sans-serif; */
     font-family: 'Rubik';
     min-height: 90svh;
@@ -36,7 +36,7 @@
     font-family: "montserrat", sans-serif;
 }
 .about-us .heading h1 {
-    color: white;
+    color: rgba(0, 0, 0, .8);
     transform: rotate(-90deg) translatey(-.5rem);
 }
 .about-us .info {
