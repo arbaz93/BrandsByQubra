@@ -49,6 +49,7 @@ const addItem = (data) => {
     writeFile('./public/data/data.json', newData, (err, res) => {
   })
   readDataFile('./public/data/data.json');
+  giveItemsIds()
 }
 const removeItem = (item) => {
   let newData = prodData.map((product, i) => {
@@ -61,6 +62,7 @@ const removeItem = (item) => {
     writeFile('./public/data/data.json', sData, (err, res) => {
       console.log("item removed")
   })
+  giveItemsIds()
 } 
 const giveItemsIds = () => {
   prodData.forEach((prod, i) => {
