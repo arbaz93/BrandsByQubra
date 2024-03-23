@@ -62,7 +62,7 @@ const removeItem = async (item) => {
   
     readDataFile(fileDirect);
 giveItemsIds()
-} 
+}
 const giveItemsIds = async () => {
   prodData.forEach((prod, i) => {
     prod.id = i

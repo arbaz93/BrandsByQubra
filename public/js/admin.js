@@ -1,12 +1,7 @@
 const form = document.querySelector(".add-item-form");
-window.onload = (event) => {
-    // const pass = "anythingQubra123"
-    // let inputPass = window.prompt("Password");
-    // if (inputPass !== pass) {
-    //     window.location.href = "/shop";
-    // }
-    document.getElementsByTagName("body")[0].style.display = "block";
-};
+if(performance.navigation.type == 2){
+    location.reload(true);
+ }
 async function updateItems() {
     const request = await fetch("./data/data.json"); //getting data
     const data = await request.json(); // converting requested data into JSON
@@ -25,7 +20,7 @@ async function updateItems() {
                                     <p>Description: <span class="item-description">${item.description}</span></p>
                                     <button class="remove-btn uppercase" data-id="${item.id}" onclick='removeItem(this)'>Remove Item</button>
                                 </div>
-                            </div>`;    
+                            </div>`;
         html = html + template;
     })
     document.querySelector(".total-items").innerHTML = html;
@@ -37,16 +32,17 @@ const removeItem = async (item) => {
         operation: 'remove-item'
     }
     const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(id), // body data type must match "Content-Type" header
-  };
-   
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(id), // body data type must match "Content-Type" header
+    };
+
     const response = await fetch('/api', options);
     const responseData = await response.json();
     item.parentNode.parentNode.remove()
     // await window.location.reload()
 }
+
 updateItems()

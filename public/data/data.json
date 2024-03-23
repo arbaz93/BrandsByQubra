@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "name": "Gori",
+    "type": "Bag",
+    "price": "2300",
+    "article": "New",
+    "status": "NEw",
+    "description": "NEw",
+    "operation": "add-item",
+    "submit": "Submit",
+    "image": "./img/IMG_6170.JPG",
+    "id": 0
+  },
+  {
+    "name": "Gori",
+    "type": "Bag",
+    "price": "2300",
+    "article": "New",
+    "status": "NEw",
+    "description": "NEw",
+    "operation": "add-item",
+    "submit": "Submit",
+    "image": "./img/IMG_6170.JPG",
+    "id": 1
+  },
+  {
+    "name": "Yousaf Arbaz",
+    "type": "Bag",
+    "price": "3200",
+    "article": "N12",
+    "status": "new ",
+    "description": "new",
+    "operation": "add-item",
+    "submit": "Submit",
+    "image": "./img/IMG_6128.JPG",
+    "id": 2
+  },
+  {
+    "name": "Yousaf Arbaz",
+    "type": "Bag",
+    "price": "1200",
+    "article": "NEw",
+    "status": "New",
+    "description": "New",
+    "operation": "add-item",
+    "submit": "Submit",
+    "image": "./img/IMG_6127.JPG",
+    "id": 3
+  },
+  {
+    "name": "Yousaf Arbaz",
+    "type": "Bag",
+    "price": "1200",
+    "article": "mk",
+    "status": "jkjk",
+    "description": "jkjm",
+    "operation": "add-item",
+    "submit": "Submit",
+    "image": "./img/IMG_6128.JPG",
+    "id": 4
+  },
+  {
+    "name": "Arian",
+    "type": "Bag",
+    "price": "13000",
+    "article": "Brand",
+    "status": "New",
+    "description": "New",
+    "operation": "add-item",
+    "submit": "Submit",
+    "image": "./img/IMG_6127.JPG",
+    "id": 5
+  }
+]
