@@ -5,15 +5,10 @@ const { readFile, writeFile } = require('fs');
 const path = require('path'); 
 let count = 0;
 let prodData = [];
-const readDataFile = (filePath) => {
-  readFile(filePath, 'utf-8', (err, res) => {
+const readDataFile = async (filePath) => {
+  await readFile(filePath, 'utf-8', (err, res) => {
     let data = JSON.parse(res);
-      data.map(d => {
-        d.id = count;
-        count++;
-      })
     prodData = data;
-    giveItemsIds()
   })
 }
 readDataFile('./public/data/data.json');
@@ -38,38 +33,35 @@ app.post("/api", (request, response) => {
   })
   
 })
-const addItem = (data) => {
+const addItem = async (data) => {
   const item =  data.body;
   let image = data.files.image;
   item.image = './img/' + image.name;
   image.mv(__dirname + '/public/img/' + image.name);
   prodData.push(item);
-  console.log(item)
   let newData = JSON.stringify(prodData);
-    writeFile('./public/data/data.json', newData, (err, res) => {
+    await writeFile('./public/data/data.json', newData, (err, res) => {
   })
-  readDataFile('./public/data/data.json');
   giveItemsIds()
 }
-const removeItem = (item) => {
+const removeItem = async (item) => {
   let newData = prodData.map((product, i) => {
     if(product.id == item.id) {
       prodData.splice(i, 1)
     }
-    readDataFile('./public/data/data.json');
   })
   let sData = JSON.stringify(prodData);
-    writeFile('./public/data/data.json', sData, (err, res) => {
-      console.log("item removed")
+    await writeFile('./public/data/data.json', sData, (err, res) => {
   })
-  giveItemsIds()
+readDataFile('./public/data/data.json');
+giveItemsIds()
 } 
-const giveItemsIds = () => {
+const giveItemsIds = async () => {
   prodData.forEach((prod, i) => {
     prod.id = i
   })
   let newData = JSON.stringify(prodData);
-    writeFile('./public/data/data.json', newData, (err, res) => {
+    await writeFile('./public/data/data.json', newData, (err, res) => {
   })
 }
 
@@ -99,16 +91,18 @@ app.get('/admin', (req, res) => {
 })
 
 // Creating routes for each product in JSON file
-readFile('./public/data/data.json', 'utf-8', (err, res) => {
-  let data = JSON.parse(res);
-  data.forEach(d => {
-    app.get(`/${d.id}`, (req, res) => {
-      res.sendFile(path.join(__dirname + '/public/product.html'));
+const creatRoutes = () => {
+    readFile('./public/data/data.json', 'utf-8', (err, res) => {
+      let data = JSON.parse(res);
+
+      data.forEach(d => {
+          app.get(`/${d.id}`, (req, res) => {
+            res.sendFile(path.join(__dirname + '/public/product.html'));
+          })
+        })
     })
-
-  })
-})
-
+}
+creatRoutes()
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
