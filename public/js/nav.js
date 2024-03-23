@@ -4,6 +4,8 @@ const navClose = () => navCollapse.dataset.navCollapsed = "false"
 document.querySelector(".nav-mobile .shop-link").addEventListener("click", () => {
     navClose();
 })
-document.querySelector("footer span").addEventListener("dblclick", () => {
-    window.location.href = "/admin"
-})
+if(window.location.pathname === "/about") {
+    document.querySelector("footer span").addEventListener("dblclick", () => {
+        window.location.href = "/admin"
+    })
+}

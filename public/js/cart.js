@@ -90,7 +90,15 @@ const addToCart = (link) => {
                     </div>`;
         cartItems.insertAdjacentHTML( 'beforeend', template );
         document.querySelector(".count").innerHTML = cart.length;
+        let cartingStat = document.querySelector("[data-carting-status]");
+        if (cartingStat.dataset.cartingStatus === "pause") {
+            cartingStat.dataset.cartingStatus = "play";
+            setTimeout(() => {
+                cartingStat.dataset.cartingStatus = "pause";
+            }, 500);
+        }
         checkWheatherCartIsEmpty();
+
 }
 const updatePrice = () => {
     let price = 0;
@@ -123,6 +131,14 @@ const removeFromCart = (itemId, item) => {
      if (window.location.pathname == '/order' || window.location.pathname == '/order#') {
         updatePrice();
     }
+    let cartingStat = document.querySelector("[data-carting-status]");
+
+    if (cartingStat.dataset.removingStatus === "pause") {
+            cartingStat.dataset.removingStatus = "play";
+            setTimeout(() => {
+                cartingStat.dataset.removingStatus = "pause";
+            }, 500);
+        }
     checkWheatherCartIsEmpty()
 }
 

@@ -1,10 +1,10 @@
 const form = document.querySelector(".add-item-form");
 window.onload = (event) => {
-    const pass = "anythingQubra123"
-    let inputPass = window.prompt("Password");
-    if (inputPass !== pass) {
-        window.location.href = "/shop";
-    }
+    // const pass = "anythingQubra123"
+    // let inputPass = window.prompt("Password");
+    // if (inputPass !== pass) {
+    //     window.location.href = "/shop";
+    // }
     document.getElementsByTagName("body")[0].style.display = "block";
 };
 async function updateItems() {

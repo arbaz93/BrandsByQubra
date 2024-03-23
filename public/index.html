@@ -48,7 +48,7 @@
             <div class="cart-icon" data-menu-open="false" data-cart-hidden="true">
                 <div class="flex cart-btn">
                     <p class="uppercase">Cart</p>
-                    <i class="fa-solid fa-cart-shopping">
+                    <i class="fa-solid fa-cart-shopping" data-carting-status="pause" data-removing-status="pause">
                         <span class="count">0</span>
                     </i>
                 </div>
@@ -194,20 +194,7 @@
             </div>
             <div class="shop-items grid">
                 
-                <div class="shop-item span-${span}" style="background-image: url('${url}')">
-                    <p class="status">20% OFF</p>
-                    <img src="/public//img/IMG_6123.JPG" alt="">
-                    <div class="flex shop-item-data">
-                        <div class="shop-item-info">
-                                <p class="shop-item-name"><a href="/${product.id}">GUcci</a></p>
-                                <p class="shop-item-type">Bag</p>
-                        </div>
-                        <div class="shop-item-buy">
-                            <p class="shop-item-price">2000PKR</p>
-                            <i class="fa-solid fa-cart-plus" onclick="addToCart(this)" data-id="${product.id}"></i>
-                        </div>
-                    </div>
-                </div>;
+               
 
 
             </div>
