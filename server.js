@@ -3,15 +3,19 @@ const app = express();
 const fileUpload = require('express-fileupload');
 const { readFile, writeFile } = require('fs');
 const path = require('path'); 
+const fileDirect  = './public/data/data.json';
 let count = 0;
 let prodData = [];
-const readDataFile = async (filePath) => {
-  await readFile(filePath, 'utf-8', (err, res) => {
-    let data = JSON.parse(res);
-    prodData = data;
+const readDataFile = (filePath) => {
+  readFile(filePath, 'utf-8', async (err, res) => {
+    if(res) {
+      let r = await res;
+      let data = await JSON.parse(r);
+      prodData = data;
+    }
   })
 }
-readDataFile('./public/data/data.json');
+readDataFile(fileDirect);
 
 app.use(express.urlencoded({
   extended: true
@@ -33,35 +37,38 @@ app.post("/api", (request, response) => {
   })
   
 })
-const addItem = async (data) => {
+const addItem = async (d) => {
+  const data = await d;
   const item =  data.body;
   let image = data.files.image;
   item.image = './img/' + image.name;
   image.mv(__dirname + '/public/img/' + image.name);
   prodData.push(item);
   let newData = JSON.stringify(prodData);
-    await writeFile('./public/data/data.json', newData, (err, res) => {
+    await writeFile(fileDirect, newData, (err, res) => {
   })
   giveItemsIds()
 }
 const removeItem = async (item) => {
+  const itm = await item;
   let newData = prodData.map((product, i) => {
     if(product.id == item.id) {
       prodData.splice(i, 1)
     }
   })
-  let sData = JSON.stringify(prodData);
-    await writeFile('./public/data/data.json', sData, (err, res) => {
+  let sData = JSON.stringify(prodData, null, 2);
+    await writeFile(fileDirect, sData, (err, res) => {
   })
-readDataFile('./public/data/data.json');
+  
+    readDataFile(fileDirect);
 giveItemsIds()
 } 
 const giveItemsIds = async () => {
   prodData.forEach((prod, i) => {
     prod.id = i
   })
-  let newData = JSON.stringify(prodData);
-    await writeFile('./public/data/data.json', newData, (err, res) => {
+  let newData = JSON.stringify(prodData, null, 2);
+    await writeFile(fileDirect, newData, (err, res) => {
   })
 }
 
@@ -92,7 +99,7 @@ app.get('/admin', (req, res) => {
 
 // Creating routes for each product in JSON file
 const creatRoutes = () => {
-    readFile('./public/data/data.json', 'utf-8', (err, res) => {
+    readFile(fileDirect, 'utf-8', (err, res) => {
       let data = JSON.parse(res);
 
       data.forEach(d => {

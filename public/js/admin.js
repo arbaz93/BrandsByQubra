@@ -47,5 +47,6 @@ const removeItem = async (item) => {
     const response = await fetch('/api', options);
     const responseData = await response.json();
     item.parentNode.parentNode.remove()
+    // await window.location.reload()
 }
 updateItems()
